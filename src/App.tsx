@@ -2,14 +2,18 @@ import './App.css'
 import CardsContainer from './components/cards/CardsContainer'
 import Header from './components/Header'
 
+import { XyzTransition } from "@animxyz/react";
+
 function App() {
   return (
-    <main className="dark min-h-screen rounded w-4xl bg-[#212121] flex flex-col">
-      <Header />
-      <CardsContainer />
-      {/** Placeholder element to see how flex will grow */}
-      <footer className='grow-1 border-2 border-red-500'></footer>
-    </main>
+    <XyzTransition appear duration="auto">
+      <main className="dark rounded bg-[#1F1F1F] flex flex-col grow-1 w-fit md:w-3xl">
+        <Header />
+        <CardsContainer />
+        {/** Placeholder element to see how flex will grow */}
+        <footer className='grow-1'>Dummy Text</footer>
+      </main>
+    </XyzTransition>
   )
 }
 

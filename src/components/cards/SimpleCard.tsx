@@ -8,7 +8,7 @@ interface SimpleCardProps {
 
 export default function SimpleCard({ title, icon }: SimpleCardProps) {
     return (
-        <Card>
+        <Card className="xyz-nested">
             <CardHeader>
                 <span className="flex flex-col items-center justify-center gap-3">
                     {icon}
